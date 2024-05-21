@@ -1,16 +1,68 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+<h1>Feedback Form</h1>
+
+<form action="/submit-feedback" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+
+    <label for="portfolio">Portfolio</label>
+    <input type="url" id="portfolio" name="portfolio" required>
+
+    <label for="favColor">Favorite Color</label>
+    <input type="color" id="favColor" name="favColor" required>
+
+    <label for="likeness">Likeness</label>
+    <input type="range" id="likeness" name="likeness" min="1" max="100" required>
+
+    <button type="submit">Submit</button>
+</form>
 
 </body>
-
 </html>
